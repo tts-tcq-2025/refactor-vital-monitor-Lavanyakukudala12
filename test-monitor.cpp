@@ -48,7 +48,6 @@ TEST(VitalCheck, MultipleViolations) {
     ASSERT_EQ(issues.size(), 3);
 }
 
-// ✅ OO Tests
 TEST(PatientAdjustments, ChildProfile) {
     VitalLimits limits;
     limits.setLimit(VitalType::PulseRate, 60, 100);
@@ -70,3 +69,4 @@ TEST(PatientAdjustments, SeniorProfile) {
 
     EXPECT_EQ(limits.getAll().at(VitalType::PulseRate).maxValue, 90);
 }
+
